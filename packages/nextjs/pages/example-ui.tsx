@@ -1,25 +1,26 @@
+// pages/index.tsx
 import type { NextPage } from "next";
 import { MetaHeader } from "~~/components/MetaHeader";
-import { ContractData } from "~~/components/example-ui/ContractData";
-import { ContractInteraction } from "~~/components/example-ui/ContractInteraction";
+import { Projects } from "~~/components/example-ui/Projects";
 
-const ExampleUI: NextPage = () => {
+const Home: NextPage = () => {
   return (
     <>
       <MetaHeader
-        title="Example UI | Scaffold-ETH 2"
-        description="Example UI created with 🏗 Scaffold-ETH 2, showcasing some of its features."
+        title="Decentralized Community Platform | Your Project"
+        description="A platform for decentralized governance and funding of community projects."
       >
-        {/* We are importing the font this way to lighten the size of SE2. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet" />
       </MetaHeader>
-      <div className="grid lg:grid-cols-2 flex-grow" data-theme="exampleUi">
-        <ContractInteraction />
-        <ContractData />
+      <div className="container mx-auto p-4">
+        <h1 className="text-4xl mb-4">Decentralized Community Platform</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Projects />
+        </div>
       </div>
     </>
   );
 };
 
-export default ExampleUI;
+export default Home;
